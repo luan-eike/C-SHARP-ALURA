@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 string Mensagem = "Screen Sound";
+List<string> listaDeBandas = new List<string>{"Neymar","Calypso","DJ Arana"};
 
 void ExibirMensagem(){
     Console.WriteLine("************");
@@ -9,6 +10,7 @@ void ExibirMensagem(){
     }
     
 void ExibirMenu(){
+    Console.Clear();
     ExibirMensagem();
     Console.WriteLine("\n1 - Registrar banda");
     Console.WriteLine("2 - Mostrar todas as bandas");
@@ -23,7 +25,7 @@ void ExibirMenu(){
     switch (Resposta1){
         case 1: criarBanda();
             break;
-        case 2: Console.WriteLine("Você digitou a opção " + Resposta1);
+        case 2: mostrarBandas();
             break;
         case 3: Console.WriteLine("Você digitou a opção " + Resposta1);
             break;
@@ -40,8 +42,23 @@ void criarBanda(){
     Console.Clear();
     Console.Write("Digite o nome da banda: ");
     string nomeBanda = Console.ReadLine()!;
+    listaDeBandas.Add(nomeBanda);
     Console.WriteLine($"A banda {nomeBanda} foi registrada com sucesso!");
-    Thread.Sleep(4000);
+    Thread.Sleep(1500);
+    Console.Clear();
+    ExibirMenu();
+}
+void mostrarBandas(){
+    Console.WriteLine("********** Lista de Bandas **********");
+    // for (int i = 0; i < listaDeBandas.Count; i++){
+    //     Console.WriteLine($"- {listaDeBandas[i]}");
+    // }
+    foreach (string i in listaDeBandas){
+        Console.WriteLine($"- {i}");        
+    }
+    Console.WriteLine("*************************************");
+    Console.WriteLine("Aperta qualquer tecla para retornar ao menu...");
+    Console.ReadKey();
     Console.Clear();
     ExibirMenu();
 }

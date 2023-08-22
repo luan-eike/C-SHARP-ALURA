@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luane\\OneDrive\\Área de Trabalho\\C#\\C#.csproj",
+      "projectUniqueName": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
       "projectName": "C#",
-      "projectPath": "C:\\Users\\luane\\OneDrive\\Área de Trabalho\\C#\\C#.csproj",
+      "projectPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
       "packagesPath": "C:\\Users\\luane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luane\\OneDrive\\Área de Trabalho\\C#\\obj\\",
+      "outputPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luane\\AppData\\Roaming\\NuGet\\NuGet.Config"

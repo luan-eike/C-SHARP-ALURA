@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\luane\\.nuget\\packages\\": {}
+    "/home/luan_eike/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
+      "projectUniqueName": "/home/luan_eike/Documentos/GitHub/C-SHARP-ALURA/C#.csproj",
       "projectName": "C#",
-      "projectPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
-      "packagesPath": "C:\\Users\\luane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\obj\\",
+      "projectPath": "/home/luan_eike/Documentos/GitHub/C-SHARP-ALURA/C#.csproj",
+      "packagesPath": "/home/luan_eike/.nuget/packages/",
+      "outputPath": "/home/luan_eike/Documentos/GitHub/C-SHARP-ALURA/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\luane\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/luan_eike/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

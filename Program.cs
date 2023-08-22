@@ -24,20 +24,22 @@ void ExibirMenu(){
 
     Console.Write("\nDigite a sua opção: ");
     string Resposta = Console.ReadLine()!;
-    int Resposta1 = int.Parse(Resposta);
+    int RespostaNum = int.Parse(Resposta);
     
-    switch (Resposta1){
+    switch (RespostaNum){
         case 1: criarBanda();
             break;
         case 2: mostrarBandas();
             break;
-        case 3: Console.WriteLine("Você digitou a opção " + Resposta1);
+        case 3: Console.WriteLine("Você digitou a opção " + RespostaNum);
             break;
-        case 4: Console.WriteLine("Você digitou a opção " + Resposta1);
+        case 4: Console.WriteLine("Você digitou a opção " + RespostaNum);
             break;
         case 0: Console.WriteLine("Tchau Tchau :D");
             break;
-        default: Console.WriteLine("Você digitou uma opção inválida!");
+        default: Console.WriteLine("\nVocê digitou uma opção inválida! Tente novamente..");
+                Thread.Sleep(2000);
+                ExibirMenu();
             break;  
     }
 }

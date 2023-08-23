@@ -104,9 +104,20 @@ void avaliarBandas(){
     string escolhaBanda = Console.ReadLine()!;
     int respostaBanda = int.Parse(escolhaBanda);
     if (respostaBanda < listaDeBandas.Keys.Count+1 & respostaBanda > 0){
-        //voce precisa adicionar um switch que selecione a banda que deseja ser avaliada
+        string bandaSelect = listaDeBandas.Keys.ElementAt(respostaBanda-1);
+        Console.Write($"Avalie a banda {bandaSelect}: ");
+        string nota = Console.ReadLine()!;
+        int notaBanda = int.Parse(nota);
+        Console.WriteLine($"Nota avaliada {notaBanda}");
+
     }else{
-        Console.WriteLine("Wrong");
+        Console.Write("Você digitou uma opção inválida, tente novamente.");
+        for(int i = 0; i < 5; i++){
+            Thread.Sleep(500);
+            Console.Write(".");
+        }
+        Console.Clear();
+        avaliarBandas();
     }
 
 }

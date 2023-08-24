@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\luan.santos\\.nuget\\packages\\": {}
+    "C:\\Users\\luane\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luan.santos\\Documents\\GitHub\\C-SHARP-ALURA\\C#.csproj",
+      "projectUniqueName": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
       "projectName": "C#",
-      "projectPath": "C:\\Users\\luan.santos\\Documents\\GitHub\\C-SHARP-ALURA\\C#.csproj",
-      "packagesPath": "C:\\Users\\luan.santos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luan.santos\\Documents\\GitHub\\C-SHARP-ALURA\\obj\\",
+      "projectPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\C#.csproj",
+      "packagesPath": "C:\\Users\\luane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luane\\OneDrive\\documentos\\GitHub\\C-SHARP-ALURA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\luan.santos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\luane\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

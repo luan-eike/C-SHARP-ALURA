@@ -38,7 +38,7 @@ void ExibirMenu(){
             break;
         case 3: avaliarBandas();
             break;
-        case 4: Console.WriteLine("Você digitou a opção " + RespostaNum);
+        case 4: mostrarMediaBanda();
             break;
         case 0: Console.WriteLine("Tchau Tchau :D");
             break;
@@ -104,11 +104,12 @@ void avaliarBandas(){
     string escolhaBanda = Console.ReadLine()!;
     int respostaBanda = int.Parse(escolhaBanda);
     if (respostaBanda < listaDeBandas.Keys.Count+1 & respostaBanda > 0){
-        string bandaSelect = listaDeBandas.Keys.ElementAt(respostaBanda-1);
+        string bandaSelect = listaDeBandas.Keys.ElementAt(respostaBanda-1);//usando o .Keys e .ElementAt para procurar no dicionario via index
         Console.Write($"Avalie a banda {bandaSelect}: ");
         string nota = Console.ReadLine()!;
         int notaBanda = int.Parse(nota);
-        Console.WriteLine($"Nota avaliada {notaBanda}");
+        listaDeBandas[bandaSelect].Add(notaBanda);//adicionando nota a uma banda
+        Console.WriteLine($"A nota {notaBanda} para {bandaSelect} foi registrada com sucesso.");
 
     }else{
         Console.Write("Você digitou uma opção inválida, tente novamente.");
@@ -119,9 +120,65 @@ void avaliarBandas(){
         Console.Clear();
         avaliarBandas();
     }
-
+    ExibirMenu();
 }
-
+//Opção 4
+void mostrarMediaBanda(){
+    Console.Clear();
+    tituloOpcao("Média das Bandas");
+    int num = 0;
+    foreach(string i in listaDeBandas.Keys){
+        num++;
+        Console.WriteLine($"{num} - {i}");
+    }
+    Console.Write("Digite a opção da banda que você quer ver a média: ");
+    string escolhaBanda = Console.ReadLine()!;
+    int respostaBanda = int.Parse(escolhaBanda);
+    if (respostaBanda < listaDeBandas.Keys.Count+1 & respostaBanda > 0){
+        Console.WriteLine();
+        int notas = 0;
+        int qtdNotas = 0;
+        foreach(int i in listaDeBandas.Values.ElementAt(respostaBanda-1)){
+            notas = notas + i;
+            qtdNotas = qtdNotas + 1;
+        }
+        if(listaDeBandas.Values.ElementAt(respostaBanda-1).Count == 0){
+            Console.WriteLine($"Banda {listaDeBandas.Keys.ElementAt(respostaBanda-1)} não possue notas.");
+        }else{
+            int media = notas/qtdNotas;
+            Console.WriteLine($"Banda escolhida foi {listaDeBandas.Keys.ElementAt(respostaBanda-1)} e tem uma média {media}.");
+        }
+        Thread.Sleep(1000);
+        Console.WriteLine();
+        Console.Write("Deseja ver outra nota? (y/n): ");
+        string verNovamente = Console.ReadLine()!;
+        if(verNovamente == "y" || verNovamente == "Y" || verNovamente == "s" || verNovamente == "S"){
+            Console.Write("Aguarde.");
+            for(int i = 0; i < 4; i++){
+                Thread.Sleep(500);
+                Console.Write(".");
+            }
+            Console.Clear();
+            mostrarMediaBanda();
+        }else{
+            Console.Write("Voltando ao menu.");
+            for(int i = 0; i < 4; i++){
+                Thread.Sleep(500);
+                Console.Write(".");
+            }
+            Console.Clear();
+            ExibirMenu();
+    }
+    }else{
+        Console.Write("Você digitou uma opção inválida, tente novamente.");
+        for(int i = 0; i < 5; i++){
+            Thread.Sleep(500);
+            Console.Write(".");
+        }
+        Console.Clear();
+        mostrarMediaBanda();
+    }
+}
 //
 
 ExibirMenu();
